@@ -30,7 +30,7 @@ Dans le package `models` créez une classe nommée `Bouteille`. Une `Bouteille` 
 
 Toutes ces informations doivent être fournies lors de sa création sauf remplissage dont on connaît d'avance l'état initial.
 
-On doit pouvoir demander toutes ces informations à une bouteille. Aucune de ces informations ne devra pouvoir être modifiée après coup sauf pour le remplissage (car une bouteille de 1.5L de coca en PET reste une bouteille de 1.5L de coca en PET même si on a bu la moitié de son contenu).
+On doit pouvoir demander toutes ces informations à une bouteille. Aucune de ces informations ne devra pouvoir être modifiée après coup sauf pour le remplissage (car une bouteille de 1.5L de coca en verre reste une bouteille de 1.5L de coca en verre même si on a bu la moitié de son contenu).
 
 Si on affiche une bouteille, celle-ci doit se montrer sous cette forme `"Bouteille 'Henniez rouge' de 1.5L en verre à 2.60 Frs - pleine"` ou encore `"Bouteille 'Sinalco' de 0.5L en verre à 2.10 Frs - vide"` ou encore `"Bouteille 'Pepsi' de 1.0L en plastique à 3.20 Frs - entamée"`. Les montants en francs doivent y être affichés sur deux positions (c-à-d 2.60 Frs et non pas 2.6 Frs).
 
@@ -82,7 +82,7 @@ namespace models {
 
 ### Commandes
 
-Toujours dans le package `models`, créez une classe permettant de modéliser une commande. Une commande concerne un seul client qui doit être fourni lors de sa création et ne pourra plus être modifié ensuite.
+Toujours dans le package `models`, créez une classe permettant de modéliser une commande. Une commande concerne un seul client qui doit être fourni lors de sa création et ne pourra plus être modifié ensuite, mais on doit pouvoir le demander.
 
 Une commande doit savoir tenter de rajouter un cageot respectivement supprimer un cageot d'elle-même. Comme il n'est pas possible de livrer des commandes de plus de 8 cageots, faites en sorte qu'on ne puisse pas dépasser ces limites lors du rajout ou suppression d'un cageot.
 
@@ -124,8 +124,8 @@ Dans le `main()` de la classe `Application` déjà fournie, effectuez les opéra
 
 | Commande | Client | Cageot 1 | Cageot 2 | Cageot 3 |
 | :---: | :--- | :--- | :--- | :--- |
-| 1 | Jean DUCOBU de Bulle | Identifiant = <b>`"X83H4"`</b><br><br>6x 'Henniez rouge' en verre de 1L à 2.60 Frs la bouteille<br><br>6x 'Henniez verte' en verre de 1L à 2.60 Frs la bouteille | Identifiant = <b>`"X83H5"`</b><br><br>2x 'Coca-Cola' en PET de 1.5L à 3.85 Frs la bouteille<br><br><br><br> | Identifiant = <b>`"X83H6"`</b><br><br>1x 'Pepsi' en PET de 1.5L à 3.55 Frs la bouteille<br><br>1x 'Sinalco' en PET de 1.5L à 4.25 Frs la bouteille |
-| 2 | Mac HARONI de Fribourg | Identifiant = <b>`"X83H7"`</b><br><br>1x 'Henniez rouge' en verre de 1L à 2.60 Frs la bouteille<br><br>2x 'Coca-Cola' en PET de 1.5L à 3.85 Frs la bouteille |  |  |
+| 1 | Jean DUCOBU de Bulle | Identifiant = <b>`"X83H4"`</b><br><br>6x 'Henniez rouge' en verre de 1L à 2.60 Frs la bouteille<br><br>6x 'Henniez verte' en verre de 1L à 2.60 Frs la bouteille | Identifiant = <b>`"X83H5"`</b><br><br>2x 'Coca-Cola' en plastique de 1.5L à 3.85 Frs la bouteille<br><br><br><br> | Identifiant = <b>`"X83H6"`</b><br><br>1x 'Pepsi' en plastique de 1.5L à 3.55 Frs la bouteille<br><br>1x 'Sinalco' en plastique de 1.5L à 4.25 Frs la bouteille |
+| 2 | Mac HARONI de Fribourg | Identifiant = <b>`"X83H7"`</b><br><br>1x 'Henniez rouge' en verre de 1L à 2.60 Frs la bouteille<br><br>2x 'Coca-Cola' en plastique de 1.5L à 3.85 Frs la bouteille |  |  |
 | | | | | |
 
 ## Résultat sur la console
